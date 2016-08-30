@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="340.0" prefWidth="542.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"	
+	fx:controller="fxmltableview.FXMLTableViewController">
+	
+	<children>
+		<Pane prefHeight="364.0" prefWidth="542.0"
+			AnchorPane.bottomAnchor="-34.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
+			<children>
+				<TableView fx:id="table" layoutX="14.0" layoutY="14.0"
+					prefHeight="285.0" prefWidth="516.0">
+
+					<columns>
+						<TableColumn fx:id="firstNameColumn" prefWidth="100.0"
+							sortable="false" text="First Name">
+							<cellFactory>
+								<FormattedTableCellFactory alignment="CENTER" />
+							</cellFactory>
+							<cellValueFactory>
+								<PropertyValueFactory property="firstName" />
+							</cellValueFactory>
+						</TableColumn>
+						<TableColumn prefWidth="100.0" sortable="false" text="Last Name">
+							<cellValueFactory>
+								<PropertyValueFactory property="lastName" />
+							</cellValueFactory>
+						</TableColumn>
+						<TableColumn prefWidth="200.0" sortable="false"
+							text="Email Address">
+							<cellValueFactory>
+								<PropertyValueFactory property="email" />
+							</cellValueFactory>
+						</TableColumn>
+					</columns>
+					<items>
+    <FXCollections fx:factory="observableArrayList">
+        <Person firstName="Jacob" lastName="Smith"  
+             email="jacob.smith@example.com"/>
+        <Person firstName="Isabella" lastName="Johnson" 
+             email="isabella.johnson@example.com"/>
+        <Person firstName="Ethan" lastName="Williams" 
+             email="ethan.williams@example.com"/>
+        <Person firstName="Emma" lastName="Jones"
+             email="emma.jones@example.com"/>
+        <Person firstName="Michael" lastName="Brown" 
+             email="michael.brown@example.com"/>
+    </FXCollections>
+</items>
+
+				</TableView>
+				<TextField layoutX="14.0" layoutY="304.0" />
+			</children>
+		</Pane>
+	</children>
+</AnchorPane>

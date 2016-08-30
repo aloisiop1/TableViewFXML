@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="293.0" prefWidth="476.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teste_novo.AppController">
+			
+   <children>
+      <TableView fx:id="tabela" layoutX="14.0" layoutY="14.0" prefHeight="224.0" prefWidth="448.0">
+        <columns>
+          <TableColumn fx:id="colNome" prefWidth="397.0" sortable="false" text="NOME" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnSair" layoutX="361.0" layoutY="248.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="101.0" style="-fx-base: silver;" text="sair" />
+      <Button fx:id="btnAdd" layoutX="14.0" layoutY="248.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="101.0" style="-fx-base: silver;" text="add" />
+      <TextField fx:id="txtNome" layoutX="131.0" layoutY="250.0" />
+      <JFXButton fx:id="btnOK" layoutX="292.0" layoutY="250.0" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: silver;" text="ok" />
+   </children>
+</AnchorPane>
